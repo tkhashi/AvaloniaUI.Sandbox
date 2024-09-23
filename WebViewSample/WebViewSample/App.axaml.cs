@@ -5,6 +5,8 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using WebViewSample.ViewModels;
 using WebViewSample.Views;
+using AvaloniaWebView;
+
 
 namespace WebViewSample;
 
@@ -36,5 +38,13 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+    
+    public override void RegisterServices()
+    {
+        base.RegisterServices();
+        
+        // if you use only WebView  
+        AvaloniaWebViewBuilder.Initialize(default);
     }
 }

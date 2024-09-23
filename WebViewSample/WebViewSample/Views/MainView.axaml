@@ -13,6 +13,7 @@
   <Grid RowDefinitions="50, *">
     <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-    <WebView x:Name="PART_WebView" Grid.Row="1" Url="https://www.google.com"/>
+    <TextBox Text="{Binding Url}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"/>
+    <WebView x:Name="PART_WebView" Grid.Row="1" Url="{Binding Url}"/>
   </Grid>
 </UserControl>
