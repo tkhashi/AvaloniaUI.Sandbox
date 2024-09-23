@@ -1,0 +1,31 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:TrayIconSample"
+             x:Class="TrayIconSample.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+    
+       <TrayIcon.Icons>
+            <TrayIcons>
+				<TrayIcon Icon="/Assets/avalonia-logo.ico" ToolTipText="Tray icon sample" >
+                    <TrayIcon.Menu>
+                        <NativeMenu>
+                            <NativeMenuItem Header="Show application" />
+                            <NativeMenuItem Header="Settings" />
+							<NativeMenuItemSeparator />
+                            <NativeMenuItem Header="Exit" />
+                        </NativeMenu>
+                    </TrayIcon.Menu>
+                </TrayIcon>
+            </TrayIcons>
+    </TrayIcon.Icons> 
+
+</Application>
