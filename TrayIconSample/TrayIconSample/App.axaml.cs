@@ -1,3 +1,4 @@
+using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
@@ -10,6 +11,8 @@ namespace TrayIconSample;
 
 public partial class App : Application
 {
+    private IClassicDesktopStyleApplicationLifetime? _desktopLifetime;
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -26,6 +29,8 @@ public partial class App : Application
             {
                 DataContext = new MainViewModel()
             };
+            
+            _desktopLifetime = desktop;
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
@@ -36,5 +41,22 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+    
+    private void OnClickSettings(object sender, EventArgs e)
+    {
+        var window = new SettingWindow();
+        window.Show();
+    }
+    
+    private void OnClickApplication(object sender, EventArgs e)
+    {
+        var window = new TransparentWindow();
+        window.Show();
+    }
+    
+    private void OnClickQuit(object sender, EventArgs e)
+    {
+        _desktopLifetime?.Shutdown();
     }
 }

@@ -18,10 +18,10 @@
 				<TrayIcon Icon="/Assets/avalonia-logo.ico" ToolTipText="Tray icon sample" >
                     <TrayIcon.Menu>
                         <NativeMenu>
-                            <NativeMenuItem Header="Show application" />
-                            <NativeMenuItem Header="Settings" />
+                            <NativeMenuItem Header="Show application" Click="OnClickApplication"/>
+                            <NativeMenuItem Header="Settings" Click="OnClickSettings"/>
 							<NativeMenuItemSeparator />
-                            <NativeMenuItem Header="Exit" />
+                            <NativeMenuItem Header="Quit" Click="OnClickQuit"/>
                         </NativeMenu>
                     </TrayIcon.Menu>
                 </TrayIcon>
