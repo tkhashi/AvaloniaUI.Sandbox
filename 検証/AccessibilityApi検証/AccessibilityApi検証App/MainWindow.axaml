@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AccessibilityApi検証App.MainWindow"
+        Title="Accessibility API 検証"
+        Width="1200"
+        Height="760">
+    <Grid RowDefinitions="Auto,Auto,*" Margin="12" RowSpacing="10">
+        <TextBlock Grid.Row="0"
+                   Text="現在開いているウィンドウ一覧と、選択ウィンドウのAX要素一覧"
+                   FontSize="18"
+                   FontWeight="SemiBold" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Button Name="RefreshWindowsButton" Content="ウィンドウ一覧を再取得" MinWidth="180" />
+            <Button Name="LoadAxElementsButton" Content="選択ウィンドウのAX要素取得" MinWidth="220" />
+            <TextBlock Name="StatusTextBlock" VerticalAlignment="Center" TextWrapping="Wrap" />
+        </StackPanel>
+
+        <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="10">
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Padding="8">
+                <Grid RowDefinitions="Auto,*" RowSpacing="8">
+                    <TextBlock Text="ウィンドウ一覧（アプリ名 / 左上座標 / PID）" FontWeight="SemiBold" />
+                    <ListBox Grid.Row="1" Name="WindowsListBox" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="8">
+                <Grid RowDefinitions="Auto,*" RowSpacing="8">
+                    <TextBlock Text="AX要素一覧（Role / Subrole / Title / Actions / Position / Size）" FontWeight="SemiBold" />
+                    <ListBox Grid.Row="1" Name="AxElementsListBox" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

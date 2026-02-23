@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessibilityApi検証App", "AccessibilityApi検証App\AccessibilityApi検証App.csproj", "{89D82FD7-84CB-ABB4-6F7F-4ABA9AD54D58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89D82FD7-84CB-ABB4-6F7F-4ABA9AD54D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D82FD7-84CB-ABB4-6F7F-4ABA9AD54D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D82FD7-84CB-ABB4-6F7F-4ABA9AD54D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D82FD7-84CB-ABB4-6F7F-4ABA9AD54D58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A19BF528-7AA8-452D-AB2B-659C8F8E8549}
+	EndGlobalSection
+EndGlobal
