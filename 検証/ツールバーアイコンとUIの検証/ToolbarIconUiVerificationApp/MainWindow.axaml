@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ToolbarIconUiVerificationApp.MainWindow"
+        Width="640"
+        Height="400"
+        MinWidth="420"
+        MinHeight="280"
+        Title="Toolbar Icon UI Verification">
+  <Grid RowDefinitions="Auto,*,Auto" Margin="20">
+    <TextBlock FontSize="22" FontWeight="Bold" Text="通常GUIウィンドウ" />
+    <Border Grid.Row="1"
+            Margin="0,16,0,16"
+            Padding="16"
+            CornerRadius="10"
+            Background="#13253A">
+      <TextBlock TextWrapping="Wrap"
+                 Foreground="#F4F8FF"
+                 Text="このウィンドウは、メニューバーアイコンのメニューから表示される通常GUIです。" />
+    </Border>
+    <Button Grid.Row="2"
+            HorizontalAlignment="Right"
+            Width="140"
+            Name="HideWindowButton"
+            Content="ウィンドウを隠す" />
+  </Grid>
+</Window>
